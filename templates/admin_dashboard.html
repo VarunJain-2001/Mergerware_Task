@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to the Admin Dashboard</h1>
+    
+    {% if transactions %}
+        <h2>Transactions</h2>
+        <ul>
+            {% for transaction in transactions %}
+                <li>Email: {{ transaction.email }}, Action: {{ transaction.action }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
